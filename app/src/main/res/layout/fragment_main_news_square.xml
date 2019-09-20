@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginBottom="@dimen/dp_5">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:hint="sddsdsds"
+            android:textSize="@dimen/sp_12"
+            android:textColorHint="@color/Gray3"
+            android:gravity="center"
+            android:background="@drawable/shape_newsdetail_comment"/>
+    </FrameLayout>
+    <include layout="@layout/line_1dp_nomargin_layout"/>
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/mPtrFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--<com.cnews.guji.smart.view.widget.state.SimpleMultiStateView
+                android:id="@+id/SimpleMultiStateView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.cnews.guji.smart.view.widget.PowerfulRecyclerView
+                    android:id="@+id/mRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    app:dividerColor="#d8d8d8"
+                    app:dividerMarginLeft="10dp"
+                    app:dividerMarginRight="10dp"
+                    app:dividerSize="0.1dp"
+                    app:useDivide="false" />
+            </com.cnews.guji.smart.view.widget.state.SimpleMultiStateView>-->
+            <com.cnews.guji.smart.view.widget.PowerfulRecyclerView
+                android:id="@+id/mRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:dividerColor="#d8d8d8"
+                app:dividerSize="0.1dp"
+                app:useDivide="false" />
+            <!--  app:dividerMarginLeft="10dp"
+                app:dividerMarginRight="10dp"-->
+        </LinearLayout>
+
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+</LinearLayout>
+
+
+
+

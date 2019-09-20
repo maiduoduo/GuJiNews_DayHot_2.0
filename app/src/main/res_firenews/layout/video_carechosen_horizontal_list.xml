@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10">
+        <android.support.v7.widget.AppCompatImageView
+            android:visibility="gone"
+            android:id="@+id/videoTitleIcon"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ico_hotfire_80px"
+            android:scaleType="fitXY"/>
+        <TextView
+            android:id="@+id/imagealbum_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/videoTitleIcon"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:text="# 最好的日子 #"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="@dimen/dp_5"
+            android:drawableRight="@drawable/ico_next_20px"
+            android:textColor="@color/Gray3"
+            android:text="更多"/>
+
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_10">
+      <!--  <com.cnews.guji.smart.helper.horizontaldragmoreview.FEle.DZStickyNavLayouts
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/head_home_layout">-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/head_home_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+      <!--  </com.cnews.guji.smart.helper.horizontaldragmoreview.FEle.DZStickyNavLayouts>-->
+    </FrameLayout>
+    <include layout="@layout/line_8dp_layout"/>
+</LinearLayout>
+

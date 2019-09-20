@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 3.2">
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="src\main\java\com\cnews\guji\smart\ui\fragment\NewsMainFragment.java"
+            line="232"/>
+    </issue>
+
+    <issue
+        id="InflateParams"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="src\main\java\com\cnews\guji\smart\ui\fragment\NewsMainFragment.java"
+            line="240"/>
+    </issue>
+
+</issues>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/layout_news_detail_top"/>
+
+    <com.cnews.guji.smart.view.ObservableScrollView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:descendantFocusability="blocksDescendants"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        android:layout_weight="1">
+
+        <com.cnews.guji.smart.view.widget.state.SimpleMultiStateView
+            android:id="@+id/SimpleMultiStateView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/ConstraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="24dp"
+                        android:maxLines="3"
+                        android:text=""
+                        android:textColor="#333333"
+                        android:textSize="24sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_toproot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_title">
+
+                        <com.cnews.guji.smart.helper.imageview.ExpandImageView
+                            android:id="@+id/iv_logo"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            fresco:placeholderImage="@mipmap/place_image_default"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="8dp"
+                            fresco:roundBottomLeft="true"
+                            fresco:roundBottomRight="true"
+                            fresco:roundTopLeft="true"
+                            fresco:roundTopRight="true"
+                            fresco:roundedCornerRadius="2dp"/>
+
+                      <!--  <ImageView
+                            android:id="@+id/iv_logo"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="8dp"
+                            android:src="@drawable/header_ico_xk" />-->
+
+                        <TextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/iv_logo"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@id/iv_logo"
+                            android:text="广告-titleimg"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_updateTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/iv_logo"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@id/iv_logo"
+                            android:text="sdfsdf"
+                            android:textColor="#989898"
+                            android:textSize="@dimen/sp_12" />
+
+                        <Button
+                            android:id="@+id/bt_like"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/read_bt_bg"
+                            android:text="关注"
+                            android:textColor="@android:color/white" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <WebView
+                    android:id="@+id/webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="45dp"
+                    android:background="@android:color/white" />
+            </LinearLayout>
+
+        </com.cnews.guji.smart.view.widget.state.SimpleMultiStateView>
+    </com.cnews.guji.smart.view.ObservableScrollView>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        layout="@layout/layout_newsdetail_bottom" />
+</LinearLayout>

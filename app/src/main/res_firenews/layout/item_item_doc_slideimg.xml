@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:src="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginVertical="2dp"
+        android:orientation="horizontal">
+        <com.cnews.guji.smart.helper.imageview.ExpandImageView
+            android:id="@+id/iv_1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="#E8E8E8"
+            android:scaleType="fitXY"
+            fresco:placeholderImage="@drawable/default_img_place" />
+
+        <com.cnews.guji.smart.helper.imageview.ExpandImageView
+            android:id="@+id/iv_2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="2dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            fresco:placeholderImage="@drawable/default_img_place" />
+        <com.cnews.guji.smart.helper.imageview.ExpandImageView
+            android:id="@+id/iv_3"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            fresco:placeholderImage="@drawable/default_img_place" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlDel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tvSourceFlag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/red"
+            android:text="原创"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/tv_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_toRightOf="@+id/tvSourceFlag"
+            android:textColor="@color/Gray3"
+            android:layout_centerVertical="true"
+            android:text="xiaosdfjkshkdf"
+            android:textSize="13sp"/>
+        <ImageView
+            android:id="@+id/ivComment"
+            android:layout_width="15dp"
+            android:layout_height="14dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="2dp"
+            android:layout_toRightOf="@id/tv_source"
+            android:src="@mipmap/ic_homepage_comment_normal" />
+
+        <TextView
+            android:id="@+id/tv_commnetsize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/ivComment"
+            android:text="32评"
+            android:textColor="@color/Gray3"
+            android:textSize="13sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="2天前"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_commnetsize"
+            android:textColor="@color/Gray3"
+            android:textSize="13sp"/>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_homepage_dislike_normal"/>
+    </RelativeLayout>
+    <include layout="@layout/line_1dp_layout"/>
+</LinearLayout>

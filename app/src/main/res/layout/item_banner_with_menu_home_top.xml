@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--android:focusable="true"
+    android:focusableInTouchMode="true"-->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/transparent"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.youth.banner.Banner
+            android:id="@+id/banner1"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:image_scale_type="center_crop"
+            app:indicator_height="6dp"
+            app:indicator_margin="2dp"
+            app:indicator_width="6dp"
+            app:is_auto_play="true" />
+    </FrameLayout>
+
+</RelativeLayout>

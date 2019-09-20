@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:drawable="@drawable/vector_refresh_style"
+    tools:targetApi="lollipop">
+
+    <target
+        android:animation="@animator/vector_refresh_style_a"
+        android:name="path1"/>
+
+    <target
+        android:animation="@animator/vector_refresh_style_b"
+        android:name="path2"/>
+
+    <target
+        android:animation="@animator/vector_refresh_style_c"
+        android:name="path3"/>
+
+</animated-vector>

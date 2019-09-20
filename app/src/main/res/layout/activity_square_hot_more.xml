@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true">
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/btnTitlebarBack"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_arrow_back_dark"/>
+        <TextView
+            android:id="@+id/btnTitlebarName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:maxLength="5"
+            android:text="热点聚焦"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+        <ImageView
+            android:id="@+id/btnTitlebarShare"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/share_outer"/>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tvLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/dp_1"
+        android:background="@color/LGray3"
+        android:layout_below="@+id/rl_top"/>
+    <com.cnews.guji.smart.view.widget.SwipeBackLayout
+        android:id="@+id/swipe_layout"
+        android:layout_below="@+id/tvLine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.cnews.guji.smart.view.widget.PowerfulRecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dp_8"
+            android:paddingHorizontal="@dimen/dp_10"
+            app:dividerColor="#d8d8d8"
+            app:dividerSize="0.1dp"
+            app:useDivide="false" />
+
+    </com.cnews.guji.smart.view.widget.SwipeBackLayout>
+</RelativeLayout>
+

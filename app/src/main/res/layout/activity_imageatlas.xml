@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:fitsSystemWindows="true">
+
+    <com.cnews.guji.smart.view.widget.SwipeBackLayout
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.cnews.guji.smart.view.widget.HackyViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.cnews.guji.smart.view.widget.SwipeBackLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/black"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/btn_titlebar_left"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_slide_close"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_centerInParent="true"
+            android:orientation="horizontal">
+            <com.cnews.guji.smart.helper.imageview.ExpandImageView
+                android:id="@+id/titlebar_ico"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                fresco:roundAsCircle="true"
+                fresco:placeholderImage="@drawable/default_img_place" />
+            <TextView
+                android:id="@+id/tv_titlebar_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:maxLength="8"
+                android:text=" "
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.cnews.guji.smart.view.MyScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#000000"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="@dimen/dp_5"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.cnews.guji.smart.view.TextViewStyleView
+                android:id="@+id/tvStyleUname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:text="">
+            </com.cnews.guji.smart.view.TextViewStyleView>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="2dp"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="@dimen/dp_10"
+                android:textSize="17sp"
+                android:minLines="1"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:text=""/>
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="2dp"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="@dimen/dp_8"
+                android:textSize="15sp"
+                android:ellipsize="end"
+                android:text=""/>
+        </LinearLayout>
+
+    </com.cnews.guji.smart.view.MyScrollView>
+
+</RelativeLayout>
+
